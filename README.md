@@ -64,7 +64,7 @@ Time spent: **15** hours spent in total
 The following four files were used to carry out the attacks: 
 
   - [xss-comment.txt](./xss-e1/xss-comment.txt)
-  - [test file\<img src=x onerror=alert(1)\>.txt](./xss-e2/"test file\<img src=x onerror=alert(1)\>.txt")
+  - [test file\<img src=x onerror=alert(1)\>.txt](./xss-e2/test\ file\<img\ src=x\ onerror=alert(1)\>.txt)
   - [index.html](./sqli/index.html)
   - [index.html](./csrf/index.html)
 
