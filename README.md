@@ -2,57 +2,75 @@
 
 Time spent: **X** hours spent in total
 
-> Objective: Find, analyze, recreate, and document **five vulnerabilities** affecting an old version of WordPress
+> Objective: Find, analyze, recreate, and document **three vulnerabilities** affecting an old version of WordPress
 
 ## Pentesting Report
 
-1. Unauthenticated Stored Cross-Site Scripting  
+1. Unauthenticated stored cross-site scripting (CVE-2015-3440) 
   - [X] Summary: 
     - Vulnerability types: XSS  
-    - Tested in version: 4.2  
-    - Fixed in version: 4.2.1 
+    - Tested in version: Wordpress 4.2  
+    - Fixed in version: [WordPress 4.2.1](https://codex.wordpress.org/Version_4.2.1) 
   - [X] GIF Walkthrough: 
-      ![xss-comment1](./xss-long_comment/xss-comment1.gif)
-      ![xss-comment2](./xss-long_comment/xss-comment2.gif)
+    ![xss-comment1](./xss-e1/xss-1.gif)
+    ![xss-comment2](./xss-e1/xss-2.gif)
   - [X] Steps to recreate: 
     - An attacker first enters the following text as a comment: 
-  - [ ] Affected source code:
-2. Vulnerability Name or ID
+  - [X] Affected source code:
+    - [list of changes](https://core.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&new=32311%40branches%2F4.2&old=32300%40branches%2F4.2)
+2. Cross-site scripting in media upload when file too large 
   - [X] Summary: 
     - Vulnerability types: XSS
-    - Tested in version: 4.7.2
-    - Fixed in version: -
+    - Tested in version: WordPress 4.7.2
+    - Fixed in version: [WordPress 4.7.5](https://codex.wordpress.org/Version_4.7.5)
   - [X] GIF Walkthrough: 
-      ![xss-upload](xss-file_upload/xss-upload.gif)
+    ![xss-upload](xss-e2/xss.gif)
   - [ ] Steps to recreate: 
   - [X] Affected source code:
-    - [Link 1](https://hackerone.com/reports/203515)
-3. Vulnerability Name or ID
-  - [ ] Summary: 
-    - Vulnerability types:
-    - Tested in version:
-    - Fixed in version: 
-  - [ ] GIF Walkthrough: 
+    - [details on XSS (HackerOne)](https://hackerone.com/reports/203515)
+3. Multiple authenticated blind SQL injection (EDB-ID 40137)
+  - [X] Summary: 
+    - Vulnerability types: SQLI
+    - Tested in version: WordPress 4.7, Spider Video Player 1.5.16
+    - Fixed in version: Spider Video Player 1.5.18
+  - [X] GIF Walkthrough: 
+    ![sqli-1](./sqli/sqli-1.gif)
+    ![sqli-2](./sqli/sqli-2.gif)
   - [ ] Steps to recreate: 
-  - [ ] Affected source code:
-    - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
+  - [X] Affected source code:
+    - [details](https://sumofpwn.nl/advisory/2016/multiple_sql_injection_vulnerabilities_in_wordpress_video_player.html)
+4. Cross-site request forgery in Insert Html Snippet plugin 
+  - [X] Summary: 
+    - Vulnerability types: CSRF
+    - Tested in version: WordPress 4.6, Insert Html Snippet 1.2
+    - Fixed in version: Insert Html Snippet 1.2.1 
+  - [X] GIF Walkthrough:
+    ![csrf-1](./csrf/csrf-1.gif)
+    ![csrf-2](./csrf/csrf-2.gif) 
+  - [ ] Steps to recreate: 
+  - [X] Affected source code:
+    - [plugin directory](https://plugins.trac.wordpress.org/changeset/1536764/insert-html-snippet)
+
 
 ## Assets
 
 List any additional assets, such as scripts or files
 
 
-
 ## Resources
 
 - [WordPress Source Browser](https://core.trac.wordpress.org/browser/)
 - [WordPress Developer Reference](https://developer.wordpress.org/reference/)
+- [Summer of Pwnage](https://sumofpwn.nl/advisories.html)
+- [WPScan vulnerability database](https://wpvulndb.com/)  
 
 GIFs created with [GIPHY Capture](https://giphy.com/apps/giphycapture).
+
 
 ## Notes
 
 Describe any challenges encountered while doing the work
+
 
 ## License
 
